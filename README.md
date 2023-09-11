@@ -3,7 +3,9 @@
 <a href='https://arxiv.org/abs/2211.14068'><img src='https://img.shields.io/badge/ArXiv-2211.14068-red'></a> &nbsp;&nbsp;&nbsp;<a href='https://e4s2022.github.io'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp;&nbsp;&nbsp; 
 [![Huggingface space](https://img.shields.io/badge/🤗-Huggingface%20Space-cyan.svg)](https://huggingface.co/Zhian) &nbsp;&nbsp;&nbsp; 
 
- ## Windows版本下的E4s复现指北
+ ## Windows版本下的E4s复现指北~~（雾）~~
+
+`conda env create -f e4s_env.yaml`
 
 修改了部分linux依赖
 
@@ -34,6 +36,8 @@ sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 
 
 ## E4s Replication Guide for Windows
+
+`conda env create -f e4s_env.yaml`
 
 This guide has been modified to replace some Linux dependencies and adjust environment variables for Windows.
 
