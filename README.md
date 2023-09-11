@@ -3,7 +3,81 @@
 <a href='https://arxiv.org/abs/2211.14068'><img src='https://img.shields.io/badge/ArXiv-2211.14068-red'></a> &nbsp;&nbsp;&nbsp;<a href='https://e4s2022.github.io'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp;&nbsp;&nbsp; 
 [![Huggingface space](https://img.shields.io/badge/🤗-Huggingface%20Space-cyan.svg)](https://huggingface.co/Zhian) &nbsp;&nbsp;&nbsp; 
 
- 
+ ## Windows版本下的E4s复现指北
+
+修改了部分linux依赖
+
+针对环境变量有所调整
+
+```python
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
+# Optional
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+```
+
+####  你需要安装的pip库：
+
+1.Ninja
+
+2.pytorch+cu11x 版本没有特定要求，高于官方就行 默认torch向下兼容
+
+#### 你需要安装的C++编译器
+
+1.Visual Studio 20xx
+
+2.在x64 Native Tools Command Prompt for VS 2022激活conda环境
+
+
+
+开始demo，目前仅测试faceswap。
+
+
+
+## E4s Replication Guide for Windows
+
+This guide has been modified to replace some Linux dependencies and adjust environment variables for Windows.
+
+### Environment Variables Setup:
+
+```
+pythonCopy codeimport os
+import sys
+
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
+
+# Optional
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+```
+
+### Required Python Libraries:
+
+1. Ninja
+
+   ```
+   bashCopy code
+   pip install ninja
+   ```
+
+2. PyTorch with CUDA 11.x support
+
+   - No specific version required, any version higher than the official recommendation should suffice since PyTorch is usually backward compatible.
+
+### Required C++ Compilers:
+
+1. Install Visual Studio 20xx (replace 'xx' with the appropriate version number).
+2. Activate your conda environment within the "x64 Native Tools Command Prompt for VS 20xx".
+
+### Demo:
+
+As of now, only the faceswap has been tested.
+
+------
+
+To install the mentioned libraries and set up the required environment, follow the steps provided above.
+
+(Note: Some specific details, such as the version number for Visual Studio or additional instructions, might need further clarification based on the user's requirements or the specific context in which this guide is being provided.)
+
+
 
 [](https://huggingface.co/spaces/PAIR/PAIR-Diffusion)
 

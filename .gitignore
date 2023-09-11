@@ -3,6 +3,9 @@
 **/*.pt
 **/*.pth
 **/*.pth.tar
+**/*.jpg
+**/*.png
+
 
 **/__pycache__/
 data
